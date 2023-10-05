@@ -1,0 +1,64 @@
+using System; // Import the System namespace for console input and output.
+
+namespace Inheritance3
+{
+    // Define the base class 'Airplane'.
+    public class Airplane
+    {
+        // Constructor for the 'Airplane' class with one parameter 'a'.
+        public Airplane(int a)
+        {
+            Console.WriteLine("cons of airplane with one param:{0}", a);
+        }
+
+        // Destructor for the 'Airplane' class.
+        ~Airplane()
+        {
+            Console.WriteLine("desc of Airplane");
+        }
+    }
+
+    // Define a derived class 'F35' that inherits from 'Airplane'.
+    public class F35 : Airplane
+    {
+        // Constructor for the 'F35' class with no parameters.
+        public F35() : base(0)
+        {
+            Console.WriteLine("cons of F35 with no params");
+        }
+
+        // Constructor for the 'F35' class with one parameter 'n'.
+        public F35(int n) : base(n)
+        {
+            Console.WriteLine("cons of F35 with one param:{0}", n);
+            Console.WriteLine("cons of F35 is a War Plane");
+        }
+    }
+    
+       public class AIRBUS : Airplane
+    {
+        // Constructor for the 'F35' class with no parameters.
+        public AIRBUS() : base(0)
+        {
+            Console.WriteLine("cons of F35 with no params");
+        }
+
+        // Constructor for the 'AIRBUS' class with one parameter 'n'.
+        public AIRBUS(int n) : base(n)
+        {
+            Console.WriteLine("cons of AIRBUS with one param:{0}", n);
+            Console.WriteLine("cons of AIRBUS is a Civil Plane");
+        }
+    }
+
+    // Main program entry point.
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            
+            F35 obj = new F35(50);
+            AIRBUS obj2 = new AIRBUS(50);
+        }
+    }
+}
